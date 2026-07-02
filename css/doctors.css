@@ -1,0 +1,283 @@
+/* Doctors Section Styles */
+#doctors {
+  background-color: var(--dark); /* Dark navy #1A2A3A */
+  padding: 56px 0;
+  color: var(--white);
+}
+
+.doctors-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.doctors-eyebrow {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--secondary); /* Coral #E8734A */
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.doctors-title {
+  font-family: 'DM Serif Display', serif;
+  font-size: 2.2rem;
+  color: var(--white);
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+
+.doctors-subtext {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7); /* Muted white */
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Directors Grid (2 Columns) */
+.directors-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  margin-bottom: 48px;
+}
+
+.director-card {
+  background-color: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: stretch;
+}
+
+.director-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  border-color: rgba(255, 255, 255, 0.18);
+}
+
+.doc-img-area-large {
+  width: 38%;
+  flex-shrink: 0;
+  height: auto;
+  min-height: 240px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.doc-img-area-large i {
+  font-size: 4rem;
+  color: rgba(255, 255, 255, 0.25);
+  transition: transform 0.3s ease;
+}
+
+.director-card:hover .doc-img-area-large i {
+  transform: scale(1.08);
+}
+
+.doc-img {
+  z-index: 1;
+  transition: transform 0.3s ease;
+}
+
+.doc-img-area-large .doc-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.director-card:hover .doc-img,
+.support-card:hover .doc-img {
+  transform: scale(1.06);
+}
+
+.badge-director {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background-color: var(--secondary); /* Coral #E8734A */
+  color: var(--white);
+  padding: 4px 10px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-radius: 50px;
+  box-shadow: 0 4px 10px rgba(232, 115, 74, 0.3);
+}
+
+.director-body {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.doc-role-label {
+  font-size: 0.75rem;
+  color: var(--secondary); /* Coral */
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.doc-name {
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.55rem;
+  color: var(--white);
+  font-weight: 400;
+  margin: 0;
+}
+
+.doc-degree {
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.65);
+  font-style: italic;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.doc-bio {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.55;
+  margin: 4px 0;
+}
+
+.doc-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 6px;
+}
+
+.spec-pill {
+  background-color: rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.9);
+  padding: 4px 10px;
+  border-radius: 50px;
+  font-size: 0.7rem;
+  font-weight: 500;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: background-color 0.25s, border-color 0.25s;
+}
+
+.director-card:hover .spec-pill {
+  background-color: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Supporting Grid (4 Columns) */
+.supporting-title-h3 {
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.6rem;
+  color: var(--white);
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.supporting-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.support-card {
+  background-color: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.support-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+.doc-img-area-small {
+  height: 160px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  overflow: hidden;
+}
+
+.doc-img-area-small i {
+  font-size: 3.2rem;
+  color: rgba(255, 255, 255, 0.25);
+  transition: transform 0.3s ease;
+}
+
+.support-card:hover .doc-img-area-small i {
+  transform: scale(1.08);
+}
+
+.doc-img-area-small .doc-img {
+  height: 100%;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.support-body {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex-grow: 1;
+}
+
+.support-body .doc-name {
+  font-size: 1.15rem;
+}
+
+.support-body .doc-role {
+  font-size: 0.72rem;
+  color: var(--accent); /* Teal #2A9D8F for supporting role */
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.support-body .doc-degree {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.35;
+}
+
+/* Responsive Queries for Doctors */
+@media (max-width: 992px) {
+  .directors-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  
+  .supporting-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .supporting-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .doctors-title {
+    font-size: 1.8rem;
+  }
+}

@@ -1,0 +1,216 @@
+/* Global Responsiveness Stylesheet */
+
+/* Breakpoint 1024px (Laptops & Large Tablets) */
+@media (max-width: 1024px) {
+  /* Header Navigation Dropdown */
+  .mobile-toggle {
+    display: block !important;
+  }
+  
+  .header-actions {
+    display: none !important;
+  }
+  
+  .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--white);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-in-out, border 0.3s;
+    flex-direction: column;
+    align-items: stretch;
+    z-index: 999;
+  }
+  
+  .navbar.active {
+    max-height: 600px;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+  }
+  
+  .nav-list {
+    flex-direction: column;
+    padding: 24px;
+    gap: 16px;
+    align-items: flex-start;
+    width: 100%;
+  }
+  
+  .nav-list li {
+    width: 100%;
+  }
+  
+  .nav-link {
+    width: 100%;
+    padding: 8px 0;
+    justify-content: space-between;
+  }
+  
+  .nav-item-dropdown .dropdown-menu {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    box-shadow: none;
+    border: none;
+    border-left: 2px solid var(--accent);
+    border-radius: 0;
+    padding: 4px 0 4px 16px;
+    margin-top: 4px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+  }
+  
+  .nav-item-dropdown.active .dropdown-menu {
+    max-height: 300px;
+  }
+  
+  .mobile-action-btn {
+    display: block !important;
+    margin: 0 24px 24px 24px;
+  }
+  
+  .mobile-action-btn .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Grid Layouts Stacked / Adjusted */
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .why-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .directors-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  /* Category Grids to 2 columns on tablet zoom levels */
+  .cat-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  
+  .facilities-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 20px;
+  }
+  
+  .supporting-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 20px;
+  }
+  
+  .testimonials-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 20px;
+  }
+  
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 32px;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 32px 16px;
+  }
+  
+  .stat-item:not(:last-child)::after {
+    display: none;
+  }
+}
+
+/* Breakpoint 768px (Tablet) */
+@media (max-width: 768px) {
+  .topbar {
+    padding: 7px 16px;
+  }
+  
+  .topbar-left .topbar-item:not(.topbar-emergency) {
+    display: none; /* Hide non-emergency contacts on tablet to prevent clutter */
+  }
+
+  /* at 768px, all .cat-grid become repeat(2, 1fr) */
+  .cat-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  
+  .director-card {
+    flex-direction: column;
+  }
+  
+  .doc-img-area-large {
+    width: 100%;
+    height: 180px;
+    min-height: auto;
+  }
+}
+
+/* Breakpoint 480px (Mobile) */
+@media (max-width: 480px) {
+  /* on mobile, reduce card height to 180px and stack grids to 2 columns */
+  .cat-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 8px !important;
+  }
+  
+  .svc-card {
+    height: 180px !important;
+  }
+  
+  .facilities-grid {
+    grid-template-columns: 1fr !important;
+  }
+  
+  .supporting-grid {
+    grid-template-columns: 1fr !important;
+  }
+  
+  .testimonials-grid {
+    grid-template-columns: 1fr !important;
+  }
+  
+  .footer-grid {
+    grid-template-columns: 1fr !important;
+  }
+  
+  .form-row {
+    grid-template-columns: 1fr !important;
+    gap: 16px;
+  }
+  
+  .why-checklist {
+    grid-template-columns: 1fr !important;
+    gap: 14px;
+  }
+  
+  .stats-grid {
+    grid-template-columns: 1fr !important;
+    gap: 24px;
+  }
+  
+  /* TPA grid becomes exactly 2 columns on mobile */
+  .tpa-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}

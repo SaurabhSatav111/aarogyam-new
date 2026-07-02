@@ -1,0 +1,157 @@
+/* Why Aarogyam Section Styles */
+#why {
+  background-color: var(--white);
+  padding: 56px 0;
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 52px;
+  align-items: center;
+}
+
+/* Left half content layout */
+.why-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.why-eyebrow {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--secondary); /* Coral #E8734A */
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.why-title {
+  font-family: 'DM Serif Display', serif;
+  font-size: 2.2rem;
+  color: var(--dark);
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+
+/* 8-item checklist styling */
+.why-checklist {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px 24px;
+  list-style: none;
+  padding: 0;
+  margin: 12px 0 0 0;
+}
+
+.why-check-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 0.88rem;
+  line-height: 1.5;
+  color: var(--text);
+}
+
+.why-check-item i {
+  color: var(--accent); /* Teal #2A9D8F */
+  font-size: 1.25rem;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+/* Right half - Emergency Gradient Card */
+.why-emergency-card {
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  border-radius: 16px;
+  padding: 40px 32px;
+  text-align: center;
+  color: var(--white);
+  box-shadow: 0 10px 30px rgba(42, 157, 143, 0.15);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.why-em-title {
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.85rem;
+  font-weight: 400;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.why-em-desc {
+  font-size: 0.88rem;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.95);
+  max-width: 320px;
+  margin: 0;
+}
+
+.why-em-phone {
+  font-family: 'DM Serif Display', serif;
+  font-size: 2.1rem;
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 400;
+  line-height: 1.1;
+  transition: transform 0.2s, color 0.2s;
+  display: block;
+}
+
+.why-em-phone:hover {
+  transform: scale(1.03);
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.why-em-landline {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.75);
+  margin-top: -6px;
+}
+
+.why-em-btn {
+  width: 100%;
+  background-color: var(--secondary); /* Coral #E8734A */
+  color: var(--white);
+  justify-content: center;
+  padding: 12px 24px;
+  margin-top: 8px;
+}
+
+.why-em-btn:hover {
+  background-color: #d8623b;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(232, 115, 74, 0.35);
+}
+
+/* Responsive Queries */
+@media (max-width: 992px) {
+  .why-grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+}
+
+@media (max-width: 600px) {
+  .why-checklist {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  
+  .why-title {
+    font-size: 1.8rem;
+  }
+  
+  .why-emergency-card {
+    padding: 32px 20px;
+  }
+  
+  .why-em-phone {
+    font-size: 1.8rem;
+  }
+}

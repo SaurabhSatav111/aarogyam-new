@@ -1,0 +1,136 @@
+/* Services Section Cards */
+.svc-card {
+  position: relative;
+  height: 220px;
+  border-radius: 14px;
+  overflow: hidden;
+  cursor: pointer;
+  border: 1px solid #dfe6ed;
+  box-shadow: 0 1px 3px rgba(16,24,40,0.06), 0 1px 2px rgba(16,24,40,0.04);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.svc-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(16,24,40,0.1);
+}
+
+.svc-img {
+  position: absolute; 
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.4s ease;
+}
+
+/* Gradients overlay for premium look without overwriting inline image */
+.svc-img::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle at 20% 20%, rgba(255,255,255,0.12) 0%, transparent 50%),
+    repeating-linear-gradient(135deg, rgba(255,255,255,0.04) 0px, rgba(255,255,255,0.04) 2px, transparent 2px, transparent 12px);
+  pointer-events: none;
+}
+
+.svc-card:hover .svc-img { 
+  transform: scale(1.06); 
+}
+
+.svc-namebar {
+  position: absolute; 
+  bottom: 0; 
+  left: 0; 
+  right: 0;
+  padding: 18px 16px 14px 16px;
+  background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 40%, transparent 100%);
+  text-align: center;
+  transition: opacity 0.3s ease;
+  z-index: 2;
+}
+
+.svc-name { 
+  font-family: 'DM Serif Display', serif; 
+  font-size: 17px; 
+  color: #fff; 
+  font-weight: 700; 
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.9), 0 2px 6px rgba(0, 0, 0, 0.9);
+  letter-spacing: 0.3px;
+}
+
+.svc-hover {
+  position: absolute; 
+  inset: 0;
+  background: rgba(10,20,30,0.82);
+  display: flex; 
+  flex-direction: column; 
+  justify-content: center;
+  padding: 20px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 3;
+}
+
+.svc-card:hover .svc-hover { 
+  opacity: 1; 
+}
+
+.svc-card:hover .svc-namebar { 
+  opacity: 0; 
+}
+
+.svch-title { 
+  font-family: 'DM Serif Display', serif; 
+  font-size: 15px; 
+  color: #fff; 
+  margin-bottom: 8px; 
+}
+
+.svch-desc { 
+  font-size: 11px; 
+  color: rgba(255,255,255,0.75); 
+  line-height: 1.65; 
+  margin-bottom: 14px; 
+}
+
+.svch-link {
+  display: inline-flex; 
+  align-items: center; 
+  gap: 5px;
+  font-size: 11px; 
+  font-weight: 700; 
+  color: #fff;
+  background: rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.25);
+  padding: 7px 14px; 
+  border-radius: 20px;
+  width: fit-content;
+  text-decoration: none;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.svch-link:hover {
+  background: rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Category Header Row */
+.cat-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.cat-readmore {
+  margin-left: auto;
+  font-size: 11px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.cat-readmore:hover {
+  text-decoration: underline;
+}

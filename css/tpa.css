@@ -1,0 +1,84 @@
+/* TPA / Insurance Section Styles */
+#tpa {
+  background-color: var(--bg);
+  padding: 56px 0;
+}
+
+.tpa-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.tpa-eyebrow {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--primary); /* Blue #1B5E8C */
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.tpa-title {
+  font-family: 'DM Serif Display', serif;
+  font-size: 2.2rem;
+  color: var(--dark);
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+
+.tpa-subtext {
+  font-size: 0.9rem;
+  color: var(--muted);
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+/* 6-column Grid */
+.tpa-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 10px;
+}
+
+/* TPA Card */
+.tpa-card {
+  background-color: var(--white);
+  border: 1px solid #e2eaf2;
+  border-radius: 10px;
+  min-height: 52px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 10px 14px;
+  font-size: 0.76rem;
+  font-weight: 600;
+  color: var(--text);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.01);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.tpa-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+/* Responsive Queries */
+@media (max-width: 992px) {
+  .tpa-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .tpa-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .tpa-title {
+    font-size: 1.8rem;
+  }
+}
