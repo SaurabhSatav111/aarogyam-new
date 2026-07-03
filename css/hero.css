@@ -254,16 +254,20 @@
 /* Responsive Styles */
 @media (max-width: 992px) {
   #hero {
-    padding: 40px 0;
+    height: auto !important;
+    min-height: 0 !important;
+    padding: 48px 0 !important;
+    overflow: visible !important;
+    display: block !important;
   }
 
   .hero-grid {
     grid-template-columns: 1fr;
-    gap: 48px;
+    gap: 40px;
   }
   
   .hero-visual {
-    height: 400px;
+    height: 340px;
   }
   
   .placeholder-card {
@@ -277,5 +281,37 @@
   
   .badge-bottom-left {
     left: 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  #hero {
+    padding: 36px 0 !important;
+  }
+
+  .hero-title {
+    font-size: 28px !important;
+  }
+  
+  .hero-eyebrow {
+    font-size: 0.75rem !important;
+  }
+  
+  .hero-tagline {
+    font-size: 0.85rem !important;
+    padding-left: 8px !important;
+  }
+  
+  .hero-description {
+    font-size: 0.88rem !important;
+  }
+  
+  .hero-visual {
+    height: 280px !important;
+  }
+  
+  .floating-badge {
+    padding: 6px 12px !important;
+    font-size: 0.7rem !important;
   }
 }
