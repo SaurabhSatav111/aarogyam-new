@@ -47,12 +47,9 @@
 .topbar {
   background-color: var(--dark);
   color: var(--white);
-  padding: 0;
-  height: 40px;
-  box-sizing: border-box;
-  display: flex;
-  align-items: center;
+  padding: 7px 0;
   font-size: 0.8rem;
+  min-height: 40px;
   position: relative;
   z-index: 1001;
 }
@@ -135,7 +132,7 @@
 }
 
 header {
-  height: 85px; /* Initial tall header height */
+  height: 100px; /* Initial tall header height */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -144,7 +141,7 @@ header {
 }
 
 .header-wrapper.scrolled header {
-  height: 70px; /* Shrunk height after scroll */
+  height: 80px; /* Shrunk height after scroll */
 }
 
 /* Logo */
@@ -156,14 +153,14 @@ header {
 }
 
 .logo-img {
-  height: 68px; /* Initial large logo height */
+  height: 76px; /* Initial large logo height */
   width: auto;
   display: block;
   transition: height 0.3s ease; /* Smooth height change */
 }
 
 .header-wrapper.scrolled .logo-img {
-  height: 54px; /* Shrunk logo height after scroll */
+  height: 60px; /* Shrunk logo height after scroll */
 }
 
 .logo-icon {
@@ -409,11 +406,7 @@ header {
 .stats-bar {
   background-color: var(--primary);
   color: var(--white);
-  padding: 20px 52px;
-  height: 92px;
-  box-sizing: border-box;
-  display: flex;
-  align-items: center;
+  padding: 22px 52px;
   position: relative;
   z-index: 5;
 }
@@ -423,7 +416,6 @@ header {
   grid-template-columns: repeat(5, 1fr);
   align-items: center;
   text-align: center;
-  width: 100%;
 }
 
 .stat-item {

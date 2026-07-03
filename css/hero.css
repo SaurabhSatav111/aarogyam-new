@@ -4,8 +4,8 @@
   overflow: hidden;
   display: flex;
   align-items: center;
-  height: calc(100vh - 217px);
-  min-height: 450px;
+  height: calc(100vh - 227px);
+  min-height: 460px;
   padding: 0;
   box-sizing: border-box;
 }
@@ -15,6 +15,7 @@
   grid-template-columns: 1.15fr 0.85fr;
   gap: 48px;
   align-items: center;
+  min-height: 440px;
   width: 100%;
 }
 
@@ -23,7 +24,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 20px;
   z-index: 2;
 }
 
@@ -152,7 +153,6 @@
   position: relative;
   border-radius: var(--radius);
   height: 420px;
-  max-height: 70vh;
   display: flex;
   justify-content: center;
   align-items: center;
