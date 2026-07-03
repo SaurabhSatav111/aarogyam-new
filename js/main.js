@@ -97,7 +97,7 @@ document.addEventListener('DOMContentLoaded', () => {
       <a href="https://www.instagram.com/arogyam_hospital_sambhajinagar/?hl=en" class="sticky-social-link ig" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
         <i class="ti ti-brand-instagram"></i>
       </a>
-      <a href="https://www.youtube.com" class="sticky-social-link yt" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+      <a href="https://www.youtube.com/@aarogyamhospital" class="sticky-social-link yt" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
         <i class="ti ti-brand-youtube"></i>
       </a>
       <a href="https://wa.me/918007070308" class="sticky-social-link wa" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
