@@ -100,6 +100,11 @@
   margin-top: 15px;
 }
 
+.hero-buttons .btn {
+  padding: 12px 28px;
+  font-size: 0.98rem;
+}
+
 .btn-navy {
   background-color: var(--dark);
   color: var(--white);
@@ -128,7 +133,7 @@
   display: flex;
   gap: 12px;
   flex-wrap: wrap;
-  margin-top: 5px;
+  margin-top: -8px;
 }
 
 .badge-pill {
@@ -287,6 +292,11 @@
 
   .hero-content {
     gap: 20px !important;
+  }
+
+  .hero-buttons .btn {
+    padding: 10px 22px !important;
+    font-size: 0.88rem !important;
   }
 
   .hero-eyebrow {
