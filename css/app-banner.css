@@ -108,9 +108,13 @@
   box-shadow: 0 4px 20px rgba(0,0,0,0.15);
 }
 
-.app-qr-card i {
-  font-size: 2rem;
-  color: var(--accent); /* Teal icon */
+.app-qr-img {
+  width: 76px;
+  height: 76px;
+  border-radius: 6px;
+  background-color: var(--white);
+  padding: 4px;
+  display: block;
 }
 
 .app-qr-text {
