@@ -47,9 +47,12 @@
 .topbar {
   background-color: var(--dark);
   color: var(--white);
-  padding: 7px 0;
+  padding: 0;
+  height: 40px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
   font-size: 0.8rem;
-  min-height: 40px;
   position: relative;
   z-index: 1001;
 }
@@ -406,7 +409,11 @@ header {
 .stats-bar {
   background-color: var(--primary);
   color: var(--white);
-  padding: 22px 52px;
+  padding: 20px 52px;
+  height: 92px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
   position: relative;
   z-index: 5;
 }
@@ -416,6 +423,7 @@ header {
   grid-template-columns: repeat(5, 1fr);
   align-items: center;
   text-align: center;
+  width: 100%;
 }
 
 .stat-item {
