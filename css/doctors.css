@@ -1,4 +1,7 @@
-/* Doctors Section Styles */
+/* ==========================================================================
+   Doctors Section Styles - Shared and Homepage Dark Theme
+   ========================================================================== */
+
 #doctors {
   background-color: var(--dark); /* Dark navy #1A2A3A */
   padding: 56px 0;
@@ -243,6 +246,7 @@
 
 .support-body .doc-name {
   font-size: 1.15rem;
+  color: var(--white);
 }
 
 .support-body .doc-role {
@@ -259,25 +263,178 @@
   line-height: 1.35;
 }
 
-/* Responsive Queries for Doctors */
+
+/* ==========================================================================
+   Team Page Specific Styles (Light Theme)
+   ========================================================================== */
+
+#doctors.section {
+  background-color: var(--white);
+  color: var(--dark);
+}
+
+#doctors.section .doctors-title {
+  color: #0d3a5c;
+}
+
+#doctors.section .doctors-subtext {
+  color: var(--text);
+}
+
+#doctors.section .doc-name {
+  color: #0d3a5c;
+}
+
+#doctors.section .doc-degree {
+  color: var(--text);
+}
+
+#doctors.section .doc-bio {
+  color: #4b5563;
+}
+
+#doctors.section .supporting-title-h3 {
+  color: #0d3a5c;
+  margin-top: 56px;
+  margin-bottom: 32px;
+}
+
+.main-card {
+  background-color: var(--white);
+  border: 1px solid #d0dde8;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.main-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(27, 94, 140, 0.1);
+  border-color: var(--primary);
+}
+
+.main-card-body {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+}
+
+/* Director badge pill overlaid top-left on photo */
+.badge-director-pill {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  background: rgba(255, 255, 255, 0.92);
+  color: var(--dark);
+  padding: 4px 10px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-radius: 50px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+  z-index: 2;
+}
+
+/* Light bordered specialty pills */
+.spec-pill-light {
+  background-color: #F7FAFC;
+  padding: 4px 10px;
+  border-radius: 50px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  border: 1px solid;
+  transition: background-color 0.25s, transform 0.25s;
+}
+
+.spec-pill-blue {
+  border-color: #1B5E8C;
+  color: #1B5E8C;
+}
+
+.spec-pill-coral {
+  border-color: #E8734A;
+  color: #E8734A;
+}
+
+.spec-pill-light:hover {
+  background-color: #edf2f7;
+  transform: translateY(-1px);
+}
+
+.sup-card {
+  background-color: var(--white);
+  border: 1px solid #d0dde8;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.sup-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(27, 94, 140, 0.08);
+  border-color: var(--primary);
+}
+
+/* Solid color role bar directly below photo */
+.support-role-bar {
+  padding: 6px 14px;
+  color: var(--white);
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.support-role-blue {
+  background-color: #1B5E8C;
+}
+
+.support-role-teal {
+  background-color: #2A9D8F;
+}
+
+.support-role-coral {
+  background-color: #E8734A;
+}
+
+.support-body-new {
+  padding: 16px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex-grow: 1;
+}
+
+.support-body-new .doc-name {
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.15rem;
+  color: #0d3a5c;
+  font-weight: 400;
+  margin: 0;
+}
+
+.support-body-new .doc-degree {
+  font-size: 0.75rem;
+  color: #6b7280; /* muted gray */
+  line-height: 1.35;
+  margin: 0;
+}
+
+
+/* ==========================================================================
+   Responsive Queries for Doctors
+   ========================================================================== */
+
 @media (max-width: 992px) {
   .directors-grid {
     grid-template-columns: 1fr;
     gap: 24px;
-  }
-  
-  .supporting-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-  }
-}
-
-@media (max-width: 576px) {
-  .supporting-grid {
-    grid-template-columns: 1fr;
-  }
-  
-  .doctors-title {
-    font-size: 1.8rem;
   }
 }

@@ -241,3 +241,359 @@ textarea.form-control {
     font-size: 1.8rem;
   }
 }
+
+/* ==========================================================================
+   Quick Contact Strip Styles
+   ========================================================================== */
+
+.contact-strip-wrapper {
+  background-color: var(--white);
+  border-bottom: 1px solid #e2eaf2;
+}
+
+.contact-strip {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr 1.7fr 0.8fr;
+  border-bottom: 1px solid #e2eaf2;
+  background-color: var(--white);
+}
+
+.contact-strip-cell {
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.contact-strip-cell:not(:last-child) {
+  border-right: 1px solid #e2eaf2;
+}
+
+.contact-strip-icon-box {
+  width: 38px;
+  height: 38px;
+  border-radius: 9px;
+  background-color: #F7FAFC;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+  color: #1B5E8C;
+}
+
+.contact-strip-cell.emergency-cell {
+  background-color: #fffcfc;
+}
+
+.contact-strip-cell.emergency-cell .contact-strip-icon-box {
+  background-color: #fdeaea;
+  color: #dc2626;
+}
+
+.contact-strip-cell.emergency-cell .contact-strip-value a {
+  color: #dc2626;
+  font-weight: 700;
+}
+
+.contact-strip-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.contact-strip-label {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--muted);
+  letter-spacing: 0.5px;
+}
+
+.contact-strip-value {
+  font-size: 0.88rem;
+  color: var(--text);
+  font-weight: 600;
+  line-height: 1.35;
+  word-break: break-all;
+}
+
+.contact-strip-value a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.contact-strip-value a:hover {
+  color: var(--primary);
+}
+
+@media (max-width: 992px) {
+  .contact-strip {
+    grid-template-columns: 1.3fr 0.7fr;
+  }
+  .contact-strip-cell {
+    border-bottom: 1px solid #e2eaf2;
+  }
+  .contact-strip-cell:nth-child(even) {
+    border-right: none;
+  }
+  .contact-strip-cell:nth-child(3), .contact-strip-cell:nth-child(4) {
+    border-bottom: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact-strip {
+    grid-template-columns: 1fr;
+  }
+  .contact-strip-cell {
+    border-right: none !important;
+    border-bottom: 1px solid #e2eaf2 !important;
+  }
+  .contact-strip-cell:last-child {
+    border-bottom: none !important;
+  }
+}
+
+/* ==========================================================================
+   Custom Right Panel & White Form Card Styles
+   ========================================================================== */
+
+.contact-right-panel {
+  background-color: #F7FAFC;
+  padding: 40px;
+  border-radius: 20px;
+  border: 1px solid #e2eaf2;
+}
+
+.appointment-card-white {
+  background-color: var(--white);
+  border: 1px solid #e2eaf2;
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+}
+
+.appointment-subtext {
+  font-size: 0.85rem;
+  color: #6b7280;
+  margin-top: 4px;
+  margin-bottom: 24px;
+  text-align: center;
+  line-height: 1.4;
+}
+
+/* Styled inputs override */
+.appointment-card-white .form-control {
+  background-color: #F7FAFC !important;
+  border: 1px solid #d0dde8 !important;
+  border-radius: 8px !important;
+  padding: 10px 12px !important;
+  font-size: 12px !important;
+  color: var(--text) !important;
+  transition: border-color 0.25s, box-shadow 0.25s;
+}
+
+.appointment-card-white .form-control:focus {
+  border-color: #1B5E8C !important;
+  box-shadow: 0 0 0 3px rgba(27, 94, 140, 0.1) !important;
+  outline: none;
+}
+
+/* Urgency selector */
+.urgency-selector-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.urgency-title-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.urgency-btn-group {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.urgency-btn {
+  background-color: var(--white);
+  border: 1px solid #d0dde8;
+  border-radius: 50px;
+  padding: 8px 12px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #1B5E8C;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.25s ease;
+}
+
+/* Selected states */
+.urgency-btn[data-value="Routine"].sel {
+  background-color: #1B5E8C;
+  border-color: #1B5E8C;
+  color: var(--white);
+}
+
+.urgency-btn[data-value="This week"].sel {
+  background-color: #1B5E8C;
+  border-color: #1B5E8C;
+  color: var(--white);
+}
+
+.urgency-btn[data-value="Emergency"].sel {
+  background-color: #dc2626;
+  border-color: #dc2626;
+  color: var(--white);
+}
+
+.urgency-btn:hover:not(.sel) {
+  background-color: #f1f5f9;
+  border-color: #b8cddf;
+}
+
+/* Send appointment button override */
+.appointment-card-white .appt-submit-btn {
+  background-color: #1B5E8C !important;
+  border: none !important;
+  border-radius: 8px !important;
+  padding: 12px 24px !important;
+  font-size: 0.92rem !important;
+  font-weight: 600 !important;
+  color: var(--white) !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  cursor: pointer !important;
+  transition: background-color 0.25s, transform 0.25s !important;
+  width: 100%;
+}
+
+.appointment-card-white .appt-submit-btn:hover {
+  background-color: #0d3a5c !important;
+  transform: translateY(-2px);
+}
+
+/* Form validation styling overrides */
+.appointment-card-white .form-control.error {
+  border-color: #e74c3c !important;
+  box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.1) !important;
+}
+
+@media (max-width: 768px) {
+  .contact-right-panel {
+    padding: 24px 16px;
+  }
+  .appointment-card-white {
+    padding: 20px 16px;
+  }
+}
+
+/* ==========================================================================
+   Full-Width Emergency Banner Styles
+   ========================================================================== */
+
+.emergency-banner-section {
+  background: linear-gradient(135deg, #dc2626, #a81e1e);
+  padding: 22px 0;
+  color: var(--white);
+}
+
+.emergency-banner-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  padding: 0 40px;
+}
+
+.emergency-left {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.emergency-badge {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  flex-shrink: 0;
+  color: var(--white);
+}
+
+.emergency-text-block {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.emergency-h3 {
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.45rem;
+  color: var(--white);
+  font-weight: 400;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.emergency-p {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.85);
+  margin: 0;
+  line-height: 1.3;
+}
+
+.emergency-call-btn {
+  background-color: var(--white);
+  color: #dc2626 !important;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-weight: 700;
+  font-size: 0.92rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  transition: transform 0.25s, box-shadow 0.25s;
+  box-shadow: 0 4px 12px rgba(220, 38, 38, 0.15);
+  white-space: nowrap;
+}
+
+.emergency-call-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 768px) {
+  .emergency-banner-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 16px;
+    padding: 0 20px;
+  }
+  
+  .emergency-left {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .emergency-call-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+
+

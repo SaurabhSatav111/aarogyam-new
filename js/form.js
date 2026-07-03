@@ -2,6 +2,28 @@ document.addEventListener('DOMContentLoaded', () => {
   const form = document.querySelector('.appt-form');
   const successBanner = document.querySelector('.success-banner');
 
+  // Enforce 10-digit limit on phone input
+  const phoneInputs = document.querySelectorAll('#appt-phone');
+  phoneInputs.forEach(phoneInput => {
+    phoneInput.addEventListener('input', (e) => {
+      e.target.value = e.target.value.replace(/\D/g, '').slice(0, 10);
+    });
+  });
+
+  // Urgency button toggling logic (if present on the page)
+  const urgencyButtons = document.querySelectorAll('.urgency-btn');
+  const urgencyInput = document.querySelector('#appt-urgency');
+  if (urgencyButtons.length > 0 && urgencyInput) {
+    urgencyButtons.forEach(btn => {
+      btn.addEventListener('click', function (e) {
+        e.preventDefault();
+        urgencyButtons.forEach(b => b.classList.remove('sel'));
+        this.classList.add('sel');
+        urgencyInput.value = this.getAttribute('data-value');
+      });
+    });
+  }
+
   if (form) {
     form.addEventListener('submit', (e) => {
       e.preventDefault();
@@ -39,6 +61,19 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       }
 
+      // Validate Email (if present)
+      const emailInput = form.querySelector('#appt-email');
+      if (emailInput) {
+        const emailVal = emailInput.value.trim();
+        if (emailVal === '') {
+          showError(emailInput, 'Email address is required');
+          hasErrors = true;
+        } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailVal)) {
+          showError(emailInput, 'Please enter a valid email address');
+          hasErrors = true;
+        }
+      }
+
       // Validate Department
       const deptInput = form.querySelector('#appt-dept');
       if (deptInput && deptInput.value === '') {
@@ -56,15 +91,17 @@ document.addEventListener('DOMContentLoaded', () => {
       if (!hasErrors) {
         // Form is valid!
         
-        // Construct mailto link data as fallback/submission option
+        // Construct submission data
         const name = nameInput.value.trim();
         const phone = phoneInput.value.trim();
+        const email = emailInput ? emailInput.value.trim() : 'N/A';
         const dept = deptInput.value;
         const doc = docInput.value;
+        const urgency = urgencyInput ? urgencyInput.value : 'Routine';
         const msgInput = form.querySelector('#appt-msg');
         const msg = msgInput ? msgInput.value.trim() : '';
 
-        console.log('Form Submitted successfully:', { name, phone, dept, doc, msg });
+        console.log('Form Submitted successfully:', { name, phone, email, dept, doc, urgency, msg });
 
         // Show Success Banner
         if (successBanner) {
@@ -77,6 +114,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Reset the form
         form.reset();
+        
+        // Restore default urgency selection after reset
+        if (urgencyButtons.length > 0 && urgencyInput) {
+          urgencyButtons.forEach(b => b.classList.remove('sel'));
+          const defaultBtn = document.querySelector('.urgency-btn[data-value="Routine"]');
+          if (defaultBtn) {
+            defaultBtn.classList.add('sel');
+          }
+          urgencyInput.value = 'Routine';
+        }
       }
     });
   }

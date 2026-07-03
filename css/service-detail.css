@@ -1,0 +1,722 @@
+/* ==========================================================================
+   Service Detail Page Styles
+   ========================================================================== */
+
+/* 1. Split Hero Section */
+.s-hero-section {
+  padding: 40px 0 24px;
+}
+
+.s-hero {
+  position: relative;
+  background: linear-gradient(135deg, #1B5E8C, #0d3a5c);
+  border-radius: var(--radius);
+  min-height: 340px;
+  overflow: hidden;
+  padding: 40px;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 32px;
+  align-items: center;
+}
+
+/* Faint decorative circle top-right */
+.s-hero .circle-dec {
+  position: absolute;
+  top: -60px;
+  right: -60px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(255, 255, 255, 0.08);
+  pointer-events: none;
+}
+
+.s-hero-left {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.s-hero-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s ease, transform 0.2s ease;
+  width: fit-content;
+}
+
+.s-hero-back:hover {
+  color: #fff;
+  transform: translateX(-3px);
+}
+
+.s-hero-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: rgba(255, 255, 255, 0.9);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  width: fit-content;
+}
+
+.s-hero-tag i {
+  color: #7fc4e8;
+  font-size: 0.95rem;
+}
+
+.s-hero-h1 {
+  font-family: 'DM Serif Display', serif;
+  font-size: 2.8rem;
+  color: #fff;
+  font-weight: 400;
+  margin: 0;
+  line-height: 1.15;
+}
+
+.s-hero-desc {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
+  margin: 0;
+  max-width: 600px;
+}
+
+.s-hero-buttons {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.s-hero-btn-filled {
+  background-color: #fff;
+  color: var(--primary);
+  border: 1px solid #fff;
+  padding: 11px 24px;
+  border-radius: 25px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.s-hero-btn-filled:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+  transform: translateY(-1px);
+}
+
+.s-hero-btn-outline {
+  background-color: transparent;
+  color: #fff;
+  border: 1.5px solid rgba(255, 255, 255, 0.5);
+  padding: 10px 24px;
+  border-radius: 25px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.s-hero-btn-outline:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+  border-color: #fff;
+  transform: translateY(-1px);
+}
+
+.s-hero-right {
+  position: relative;
+  z-index: 2;
+  height: 280px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.s-hero-right img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+
+/* 2. Two-Column Body Structure */
+.s-body-section {
+  padding: 16px 0 56px;
+}
+
+.s-body-grid {
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  gap: 24px;
+}
+
+
+/* Left Content (Cards) */
+.s-content-card {
+  background-color: #F7FAFC;
+  border: 1px solid #e2eaf2;
+  border-radius: var(--radius);
+  padding: 24px;
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.s-content-card:last-child {
+  margin-bottom: 0;
+}
+
+.s-card-title {
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.6rem;
+  color: var(--dark);
+  font-weight: 400;
+  margin: 0;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+  padding-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.s-card-title i {
+  color: var(--primary);
+  font-size: 1.5rem;
+}
+
+.s-card-p {
+  font-size: 0.95rem;
+  color: var(--text);
+  line-height: 1.65;
+  margin: 0;
+}
+
+/* Info Boxes Layout for About Card */
+.s-info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 8px;
+}
+
+.s-info-box {
+  background-color: #fff;
+  border: 1px solid #e2eaf2;
+  border-radius: 10px;
+  padding: 18px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+}
+
+.s-info-box-title {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--primary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.s-info-box-text {
+  font-size: 0.85rem;
+  color: var(--text);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Step Items for How It Works Card */
+.s-steps-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 8px;
+}
+
+.s-step-item {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.s-step-badge {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: var(--primary);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.95rem;
+  flex-shrink: 0;
+  box-shadow: 0 4px 10px rgba(27, 94, 140, 0.2);
+}
+
+.s-step-details {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.s-step-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--dark);
+  margin: 0;
+}
+
+.s-step-text {
+  font-size: 0.88rem;
+  color: var(--text);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Accordion for FAQs Card */
+.s-accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.accordion-item {
+  background-color: #fff;
+  border: 1px solid #e2eaf2;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: border-color 0.2s ease;
+}
+
+.accordion-item.active {
+  border-color: rgba(27, 94, 140, 0.4);
+}
+
+.accordion-header {
+  padding: 16px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+.accordion-title {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--dark);
+  margin: 0;
+}
+
+.accordion-icon {
+  font-size: 1.1rem;
+  color: var(--muted);
+  transition: transform 0.3s ease;
+}
+
+.accordion-item.active .accordion-icon {
+  transform: rotate(180deg);
+  color: var(--primary);
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
+
+.accordion-body {
+  padding: 0 20px 16px 20px;
+  font-size: 0.88rem;
+  color: var(--text);
+  line-height: 1.6;
+}
+
+
+/* Right Sidebar Column */
+.s-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.s-sidebar-box {
+  background-color: #fff;
+  border: 1px solid #e2eaf2;
+  border-radius: var(--radius);
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(16, 24, 40, 0.02);
+}
+
+.s-sidebar-title {
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.25rem;
+  color: var(--dark);
+  font-weight: 400;
+  margin-bottom: 14px;
+  margin-top: 0;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  padding-bottom: 8px;
+}
+
+/* Box 1: All Services List */
+.s-side-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.s-side-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 14px;
+  border-radius: 8px;
+  color: var(--text);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.s-side-link:hover {
+  background-color: #F7FAFC;
+  color: var(--primary);
+}
+
+.s-side-link.active {
+  background-color: #1B5E8C;
+  color: #fff;
+}
+
+.s-side-link.active i {
+  color: #fff;
+}
+
+.s-side-link i {
+  font-size: 0.95rem;
+  color: var(--muted);
+  transition: transform 0.2s ease;
+}
+
+.s-side-link:hover i {
+  transform: translateX(2px);
+}
+
+/* Box 2: Sidebar CTA Box */
+.s-sidebar-cta {
+  background: linear-gradient(135deg, #1B5E8C 0%, #2A9D8F 100%);
+  border: none;
+  color: #fff;
+  text-align: center;
+  padding: 24px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.s-sidebar-cta .circle-dec {
+  position: absolute;
+  bottom: -40px;
+  right: -40px;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.s-side-cta-icon-box {
+  width: 48px;
+  height: 48px;
+  background-color: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  margin: 0 auto 12px auto;
+  color: #fff;
+}
+
+.s-side-cta-h3 {
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+  margin: 0 0 8px 0;
+  line-height: 1.25;
+}
+
+.s-side-cta-p {
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.5;
+  margin: 0 0 18px 0;
+}
+
+.s-side-cta-btn {
+  background-color: #fff;
+  color: var(--primary);
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+
+.s-side-cta-btn:hover {
+  background-color: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transform: translateY(-1px);
+}
+
+/* Box 3: Sidebar Contact Box */
+.s-side-contact-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.s-side-contact-row {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.s-side-contact-icon-box {
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  background-color: rgba(27, 94, 140, 0.06);
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.s-side-contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.s-side-contact-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--muted);
+  letter-spacing: 0.5px;
+}
+
+.s-side-contact-value {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--dark);
+  line-height: 1.4;
+}
+
+.s-side-contact-value a {
+  color: var(--dark);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.s-side-contact-value a:hover {
+  color: var(--primary);
+}
+
+
+/* 3. Prev/Next Navigation Strip */
+.s-nav-strip {
+  background-color: #F7FAFC;
+  border-top: 1px solid #e2eaf2;
+  padding: 20px 0;
+  margin-top: 24px;
+}
+
+.s-nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.s-nav-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--text);
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.s-nav-link:hover {
+  color: var(--primary);
+}
+
+.s-nav-link.s-prev:hover {
+  transform: translateX(-3px);
+}
+
+.s-nav-link.s-next:hover {
+  transform: translateX(3px);
+}
+
+.s-nav-mid {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+
+/* ==========================================================================
+   Responsive Overrides for Detail Pages
+   ========================================================================== */
+
+@media (max-width: 1024px) {
+  .s-hero {
+    grid-template-columns: 1.1fr 0.9fr;
+    padding: 32px;
+  }
+  .s-hero-h1 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .s-hero {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 30px 24px;
+  }
+  .s-hero-right {
+    height: 240px;
+    max-width: 480px;
+    margin: 0 auto;
+    width: 100%;
+  }
+  .s-body-grid {
+    grid-template-columns: 1fr;
+  }
+  .s-sidebar {
+    margin-top: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .s-hero-h1 {
+    font-size: 1.8rem;
+  }
+  .s-hero-buttons {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    gap: 8px;
+  }
+  .s-hero-btn-filled,
+  .s-hero-btn-outline {
+    justify-content: center;
+    width: 100%;
+  }
+  .s-info-grid {
+    grid-template-columns: 1fr;
+  }
+  .s-nav-container {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+  .s-nav-mid {
+    order: -1;
+  }
+}
+
+/* ==========================================================================
+   Service Detail Theme Overrides
+   ========================================================================== */
+
+/* Child Care (Coral Theme) */
+.child-care-theme .s-card-title i,
+.child-care-theme .s-info-box-title i,
+.child-care-theme .s-info-box-title {
+  color: var(--secondary) !important;
+}
+
+.child-care-theme .s-step-badge {
+  background-color: var(--secondary) !important;
+  box-shadow: 0 4px 10px rgba(232, 115, 74, 0.25) !important;
+}
+
+.child-care-theme .accordion-item.active {
+  border-color: rgba(232, 115, 74, 0.4) !important;
+}
+
+.child-care-theme .accordion-item.active .accordion-icon {
+  color: var(--secondary) !important;
+}
+
+.child-care-theme .s-nav-link:hover {
+  color: var(--secondary) !important;
+}
+
+/* Diagnostics (Teal Theme) */
+.diagnostics-theme .s-card-title i,
+.diagnostics-theme .s-info-box-title i,
+.diagnostics-theme .s-info-box-title {
+  color: var(--accent) !important;
+}
+
+.diagnostics-theme .s-step-badge {
+  background-color: var(--accent) !important;
+  box-shadow: 0 4px 10px rgba(42, 157, 143, 0.25) !important;
+}
+
+.diagnostics-theme .accordion-item.active {
+  border-color: rgba(42, 157, 143, 0.4) !important;
+}
+
+.diagnostics-theme .accordion-item.active .accordion-icon {
+  color: var(--accent) !important;
+}
+
+.diagnostics-theme .s-nav-link:hover {
+  color: var(--accent) !important;
+}
+

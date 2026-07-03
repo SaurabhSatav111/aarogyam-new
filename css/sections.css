@@ -134,3 +134,53 @@
 .cat-readmore:hover {
   text-decoration: underline;
 }
+
+/* ==========================================================================
+   Section & Grid Overflow Fixes
+   ========================================================================== */
+
+.section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 44px 40px;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.main-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.main-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 200px;
+  min-width: 0;
+}
+
+.sup-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.sup-card {
+  min-width: 0;
+}
+
+.mc-photo-wrap img,
+.sup-photo-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  max-width: 100%;
+}
+
+.mc-photo-wrap,
+.sup-photo-wrap {
+  overflow: hidden;
+  min-width: 0;
+}
+
