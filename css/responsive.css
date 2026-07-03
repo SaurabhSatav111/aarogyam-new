@@ -194,6 +194,17 @@
   .contact-strip-cell:nth-child(4) {
     border-bottom: none !important;
   }
+
+  /* Doctor Director Cards stacking */
+  .director-card {
+    flex-direction: column !important;
+  }
+  
+  .doc-img-area-large {
+    width: 100% !important;
+    height: 320px !important;
+    min-height: 0 !important;
+  }
 }
 
 /* Breakpoint 600px (Mobile Emergency Banner) */
